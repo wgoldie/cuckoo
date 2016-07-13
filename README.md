@@ -14,7 +14,7 @@ Create a S3 bucket and populate it with images in the format `HH-MM.png`, with n
 
 Use AWS KMS to encrypt your twitter app and user credentials to a file called `twcreds` in the application root, this should be something like
 
-`aws kms encrypt --key-id [your kms key id] --plaintext '{ "consumer_key": "[your consumer key", "consumer_secret": "[your consumer secret]", "token": "[your token], "token_secret": "[your token secret]" }' --query CiphertextBlob --output text | base64 -d > twcreds`
+`aws kms encrypt --key-id [your kms key id] --plaintext '{ "consumer_key": "[your consumer key]", "consumer_secret": "[your consumer secret]", "token": "[your token], "token_secret": "[your token secret]" }' --query CiphertextBlob --output text | base64 -d > twcreds`
 
 depending on your system. You can use `certutil` on Windows instead of `base64`, just copy the output of the KMS command (run without pipe) to intermediary.txt and run `-decode intermediary.txt twcreds`.
 
