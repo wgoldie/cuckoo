@@ -9,8 +9,8 @@ Uses boilerplate from [SC5 AWS Lambda Boilerplate](https://github.com/SC5/sc5-aw
 
 You need the AWS SDK installed to your path and configured with the proper credentials/region to use KMS and upload Lambda functions.
 
-Create a S3 bucket and populate it with images in the format `HH-MM.png`, with no leading zeros
-(it should be easy to modify the source in `src/index.js` to match any similar format).
+Create a S3 bucket name `clock` and populate it with images in the format `HH-MM.png`, with no leading zeros
+(it should be easy to modify the source in `src/index.js` to match any similar format or bucket name).
 
 Use AWS KMS to encrypt your twitter app and user credentials to a file called `twcreds` in the application root, this should be something like
 
